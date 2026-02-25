@@ -1,0 +1,27 @@
+<!--""saya mengerjakan tugas ini sendiri tanpa melakukan kecurangan seperti menggunakan, 
+mendupliaksi kode perogram kode program yang ada. jia saya melakukan kecurangan dalam perngerjaan tugas ini 
+maka saya siap menerima sanksi atau hukuman dari dari dosen mata kuliah dan tuhan / allah  swt"-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 2</title>
+</head>
+<body>
+    <button onclick="HitungKlik()">Click me</button>
+    <p id="counter">You have clicked the button 0 time(s) in this session.</p>
+    <p>Click The Button to see the counter increase</p>
+    <p>Close the browser tab (or window), and try again, the counter is reset</p>
+
+    <script>
+        let jumlahKlik = parseInt(localStorage.getItem('jumlahKlik')) || 0;
+        document.getElementById("counter").innerHTML =`You have clicked the button ${jumlahKlik} time(s).`;
+
+        function HitungKlik() {
+            jumlahKlik++;
+            localStorage.setItem('jumlahKlik', jumlahKlik);
+            document.getElementById("counter").innerHTML = `You have clicked the button ${jumlahKlik} time(s).`;
+        }
+    </script>
+</body>
+</html>
