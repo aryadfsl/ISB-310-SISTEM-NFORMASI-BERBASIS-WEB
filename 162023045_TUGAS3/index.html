@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Preferensi Warna</title>
+    <link rel="stylesheet" href="/162023045_TUGAS3/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Preferensi Warna</h1>
+
+        <fieldset>
+            <legend>Warna</legend>
+
+            <div class="form-group">
+                <label>1. Warna latarbelakang</label>
+                <div class="color-box" id="bgPreview" onclick="openModal('bg')"></div>
+            </div>
+
+            <div class="form-group">
+                <label>2. Warna teks</label>
+                <div class="color-box red" id="textPreview" onclick="openModal('text')"></div>
+            </div>
+        </fieldset>
+
+        <button class="save-btn" onclick="applyColor()">Simpan</button>
+    </div>
+
+    <div class="modal" id="colorModal">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button onclick="closeModal()">Cancel</button>
+                <span>Choose a color</span>
+                <button class="select-btn" onclick="selectColor()">Select</button>
+            </div>
+
+            <div class="color-grid" id="colorGrid"></div>
+
+            <div class="custom-section">
+                <p>Custom</p>
+                <div class="custom-row">
+                    <div class="color-item add-btn" onclick="addCustomColor()">+</div>
+                    <div id="customColors" class="custom-colors"></div>
+                </div>
+            </div>
+
+            <input type="color" id="customPicker" hidden>
+        </div>
+    </div>
+
+    <script>
+        const colors = [
+            "#ff0000", "#ffa500", "#ffff00", "#7fff00", "#6a5acd", "#dda0dd", "#d2b48c", "#808080",
+            "#cc0000", "#ff8c00", "#ffd700", "#32cd32", "#4682b4", "#800080", "#b8860b", "#696969",
+            "#990000", "#ff4500", "#daa520", "#228b22", "#1e3a8a", "#6a0dad", "#a0522d", "#2f4f4f",
+            "#000000", "#2f4f4f", "#696969", "#a9a9a9", "#c0c0c0", "#dcdcdc", "#f5f5f5", "#ffffff"
+        ];
+
+        let activeTarget = null;
+        let tempSelectedColor = null;
+
+        const grid = document.getElementById("colorGrid");
+        const customPicker = document.getElementById("customPicker");
+        const customContainer = document.getElementById("customColors");
+
+        colors.forEach(color => {
+            const div = document.createElement("div");
+            div.classList.add("color-item");
+            div.style.background = color;
+
+            div.addEventListener("click", function () {
+                document.querySelectorAll(".color-item").forEach(c => c.classList.remove("selected"));
+                div.classList.add("selected");
+                tempSelectedColor = color;
+            });
+
+            grid.appendChild(div);
+        });
+
+        function openModal(target) {
+            activeTarget = target;
+            document.getElementById("colorModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("colorModal").style.display = "none";
+        }
+
+        function selectColor() {
+            if (!tempSelectedColor) return;
+
+            if (activeTarget === "bg") {
+                document.getElementById("bgPreview").style.background = tempSelectedColor;
+                document.body.style.background = tempSelectedColor;
+            } else {
+                document.getElementById("textPreview").style.background = tempSelectedColor;
+                document.body.style.color = tempSelectedColor;
+            }
+
+            closeModal();
+        }
+
+        function addCustomColor() {
+            customPicker.click();
+        }
+
+        customPicker.addEventListener("input", function () {
+            const newColor = this.value;
+
+            const div = document.createElement("div");
+            div.classList.add("color-item");
+            div.style.background = newColor;
+
+            div.addEventListener("click", function () {
+                document.querySelectorAll(".color-item").forEach(c => c.classList.remove("selected"));
+                div.classList.add("selected");
+                tempSelectedColor = newColor;
+            });
+
+            customContainer.appendChild(div);
+        });
+    </script>
+</body>
+
+</html>
