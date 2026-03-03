@@ -1,0 +1,115 @@
+/*"saya mengerjakan tugas ini sendiri tanpa melakukan kecurangan seperti menggunakan, mendupliaksi kode perogram kode program yang ada. jia saya melakukan kecurangan dalam perngerjaan tugas ini maka saya siap menerima sanksi atau hukuman dari dari dosen mata kuliah dan tuhan / allah  swt"*/
+
+body {
+    background: #4D83AA;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-family: Arial, sans-serif;
+}
+
+.main-wrapper {
+    width: 800px;
+    min-height: 600px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header-yellow {
+    background: #E2D800;
+    position: relative;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.header-yellow-dots {
+    height: 15px;
+    width: 100%;
+    background-color: #E2D800;
+    background-image: radial-gradient(circle, #4D83AA 30%, transparent 30%);
+    background-size: 20px 20px;
+    background-position: center top;
+    margin-top: -8px;
+}
+
+.header-yellow h1 {
+    margin: 0;
+    color: #032152;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 32px;
+}
+
+.content-area {
+    padding: 30px;
+    text-align: center;
+}
+
+.form-container {
+    width: 500px;
+    margin: auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.label-box {
+    flex: 0 0 40%;
+    background: #C0E8FB;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: right;
+    font-weight: bold;
+    color: #1F5A78;
+}
+
+    .input-box {
+        flex: 1;
+        background: #C0E8FB;
+        padding: 10px 15px;
+        border-radius: 12px;
+    }
+
+    .input-box input {
+        width: 100%;
+        padding: 6px 12px;
+        border: 1.5px dashed #1F5A78;
+        border-radius: 10px;
+        outline: none;
+        box-sizing: border-box; 
+    }
+
+.remember-card {
+    background: #C0E8FB;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: right;
+    margin-top: 10px;
+    color: #1F5A78;
+}
+
+.submit-card {
+    background: #C0E8FB;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    background: #5BA4C4;
+    color: white;
+    border: none;
+    padding: 7px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #1F5A78;
+}
