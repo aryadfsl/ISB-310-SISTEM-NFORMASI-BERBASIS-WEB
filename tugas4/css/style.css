@@ -1,0 +1,155 @@
+.form-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.judul-blok p {
+    padding-left: 32px;
+}
+.judul-blok {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+.judul-blok h1, .judul-blok p {
+    text-align: left;
+    margin-left: 0;
+}
+body{
+    margin:0;
+    font-family: Arial;
+    background-image: url('../assets/logo.jpeg');
+    background-size: 7% 12%; 
+    background-repeat: repeat;
+}
+
+.wrapper{
+    width: 900px;
+    margin: auto;
+    background: #d79a3a;
+    border: 5px solid #6d2c2c;
+}
+
+.header{
+    height: 180px;
+    background-image:
+        url('../assets/depan_itenas.jpg'), url('../assets/depan_itenas.jpg'), url('../assets/depan_itenas.jpg'),
+        url('../assets/depan_itenas.jpg'), url('../assets/depan_itenas.jpg'), url('../assets/depan_itenas.jpg');
+    background-size: 33.33% 50%;
+    background-position:
+        left top, center top, right top,
+        left bottom, center bottom, right bottom;
+    background-repeat: no-repeat;
+    border: 3px solid #6d2c2c;
+    box-sizing: border-box;
+}
+
+.content{
+    display: flex;
+}
+
+.sidebar{
+    width: 180px;
+    padding: 20px;
+}
+
+.sidebar a{
+    display:block;
+    padding:8px;
+    margin-bottom:10px;
+    text-decoration:none;
+    color: blue;
+    border-bottom:1px solid #444;
+}
+
+.main{
+    flex:1;
+    padding: 20px;
+}
+
+h1{
+    text-align:center;
+}
+
+hr{
+    border:1px solid #333;
+}
+
+.form-group {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 1.08em;
+    font-weight: normal;
+    width: 100%;
+    max-width: 440px;
+}
+.form-group label {
+    font-weight: normal;
+    text-align: left;
+    min-width: 230px;
+    margin-right: 0;
+}
+.output-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    margin-top: 10px;
+    min-width: 260px;
+    max-width: 350px;
+}
+.output-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 6px;
+}
+.output-label {
+    display: inline-block;
+    width: 110px;
+    font-weight: bold;
+    text-align: left;
+    margin-right: 10px;
+}
+.output-row input {
+    flex: 1;
+    min-width: 100px;
+    max-width: 180px;
+    margin-left: 0;
+}
+
+td {
+    padding: 4px 12px;
+    border: 1px solid #888;
+}
+
+input{
+    width:120px;
+}
+
+.footer{
+    text-align:center;
+    background: orange;
+    padding:8px;
+    font-weight:bold;
+}
