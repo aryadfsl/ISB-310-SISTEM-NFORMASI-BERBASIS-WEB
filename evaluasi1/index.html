@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Program Garis Hidup</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="header"></div>
+        <div class="content">
+            <div class="sidebar">
+                <a href="#" onclick="showHome()">Home</a>
+                <a href="#" onclick="showMenu()">Menu</a>
+                <a href="#" onclick="showCalculator()">Calculator</a>
+            </div>
+
+            <div class="main-content">
+                <div id="home-row" class="home-row">
+                    <span>klik button disamping &gt;&gt;</span>
+                    <button class="shout-btn" onclick="showMenuAfterAlert()">Shout</button>
+                </div>
+
+                <div id="calc-section" class="calc-section">
+                    <div class="calc-inputs-row">
+                        <input type="number" id="bil1" class="calc-input" placeholder="0">
+                        <select id="opr" class="calc-select">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                        </select>
+                        <input type="number" id="bil2" class="calc-input" placeholder="0">
+                        <span class="calc-equal">=</span>
+                        <input type="text" id="hasil" readonly class="calc-input">
+                    </div>
+
+                    <div class="calc-buttons-row">
+                        <button class="calc-btn" onclick="hitungKalkulator()">Hitung</button>
+                        <button class="calc-btn" onclick="resetKalkulator()">Reset</button>
+                    </div>
+                </div>
+
+                <div id="menu-section" class="menu-section">
+                    <table class="menu-table">
+                        <tr>
+                            <td>No</td>
+                            <td>Makanan/Minuman</td>
+                            <td>Harga</td>
+                            <td>Pesan</td>
+                            <td rowspan="7" class="reset-col">
+                                <button class="shout-btn" onclick="resetMenu()">Reset</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Bakso Istimewa</td>
+                            <td>@ Rp 12000</td>
+                            <td><input type="number" id="qty1" value="0" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Soto Spesial</td>
+                            <td>@ Rp 10000</td>
+                            <td><input type="number" id="qty2" value="0" min="0"></td>
+                        </tr>
+                        <tr> 
+                            <td>3</td>
+                            <td>Mie Ayam Super</td>
+                            <td>@ Rp 15000</td>
+                            <td><input type="number" id="qty3" value="0" min="0"></td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="3">Jumlah Total</td>
+                            <td><input type="text" id="total" value="0" readonly></td>
+                        </tr>
+                        <tr class="diskon-row">
+                            <td colspan="3">Diskon</td>
+                            <td><input type="text" id="diskon" value="0" readonly></td>
+                        </tr>
+                        <tr class="bayar-row">
+                            <td colspan="3">Jumlah Bayar</td>
+                            <td><input type="text" id="bayar" value="0" readonly></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            162023045<br>
+            Sistem Informasi | ITENAS 2026
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
